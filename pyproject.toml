@@ -1,0 +1,41 @@
+[tool.black]
+line_length = 120
+exclude = '''(\.git|\.hg|\.mypy_cache|\.tox|\.venv|_build|buck-out|build|dist|^.*\b(migrations)\b.*$)'''
+
+[tool.isort]
+line_length = 120
+profile="black"
+
+[tool.pyright]
+venv = ".venv"
+venvPath = "."
+include = [
+    "modules",
+    "config",
+]
+exclude = [
+    "**/__pycache__",
+]
+defineConstant = { DEBUG = true }
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+pythonVersion = "3.11.3"
+pythonPlatform = "Linux"
+
+[tool.poetry]
+name = "export-report"
+version = "0.1.0"
+description = ""
+authors = ["Korchizhinskiy Nazar"]
+readme = "README.md"
+packages = [{include = "export_report"}]
+
+[tool.poetry.dependencies]
+python = "3.11.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
