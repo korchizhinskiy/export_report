@@ -82,5 +82,3 @@ class DataComponent(SheetComponent):
 
     def export_into_dataframe(self) -> DataFrame:
         return DataFrame([data_item for data_item in self._data])
-
-

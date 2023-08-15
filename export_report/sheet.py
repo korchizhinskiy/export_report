@@ -14,4 +14,3 @@ class ReportSheet:
 
     def add_component(self, component: SheetComponent) -> None:
         self.components.append(component.export_into_dataframe())
-
