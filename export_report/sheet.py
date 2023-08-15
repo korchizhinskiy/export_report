@@ -4,9 +4,7 @@ from export_report.sheet_component import SheetComponent
 
 
 class ReportSheet:
-    """
-    Sheet class for use in report builder.
-    """
+    """Sheet class for use in report builder."""
 
     sheet_name: str
     components: list[DataFrame] = []
@@ -16,3 +14,4 @@ class ReportSheet:
 
     def add_component(self, component: SheetComponent) -> None:
         self.components.append(component.export_into_dataframe())
+
